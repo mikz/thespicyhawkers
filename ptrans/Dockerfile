@@ -6,5 +6,6 @@ WORKDIR /opt/app/ptrans-${PTRANS_VERSION}.Final
 RUN unzip /tmp/ptrans-${PTRANS_VERSION}.Final-dist.zip -d /opt/app/ \
  && rm /tmp/*.zip
 
+USER 1001
 ENTRYPOINT ["java", "-jar", "ptrans-all.jar", "-c" ]
 CMD ["ptrans.conf"]
